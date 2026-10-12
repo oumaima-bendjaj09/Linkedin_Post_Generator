@@ -60,10 +60,7 @@ Raw posts ──► LLM metadata extraction ──► Processed posts (topic, la
 **Prerequisites:** Python 3.10 or higher and a free Groq API key.
 
 **1. Clone the repository**
-```bash
-git clone https://github.com/<your-username>/<your-repo>.git
-cd <your-repo>
-```
+
 
 **2. Create a virtual environment and install dependencies**
 ```bash
@@ -75,7 +72,7 @@ pip install -r requirements.txt
 ```
 
 **3. Add your API key**
-Create a free key at [console.groq.com/keys](https://console.groq.com/keys), then copy `.env.example` to `.env` and add it:
+Create a free key at groq.com, then copy `.env.example` to `.env` and add it:
 ```
 GROQ_API_KEY=your_api_key_here
 ```
@@ -86,30 +83,7 @@ streamlit run main.py
 ```
 The app opens at `http://localhost:8501`.
 
-##  Use Your Own Posts
 
-1. Put your posts in `data/raw_posts.json`, each as `{"text": "..."}`.
-2. Run the preprocessing step:
-   ```bash
-   python preprocess.py
-   ```
-3. Restart the app. Your topics now appear in the **Topic** dropdown.
-
-## 🔧 Configuration
-
-| Variable | Description | Default |
-|---|---|---|
-| `GROQ_API_KEY` | Your Groq API key | *required* |
-| `GROQ_MODEL_NAME` | Groq model to use | `openai/gpt-oss-120b` |
-
-Groq retires models regularly. If you get a `model_not_found` or `model_decommissioned` error, check the [current model list](https://console.groq.com/docs/models) and update `GROQ_MODEL_NAME` in your `.env`.
-
-## 🔭 Possible Improvements
-
-- Add more languages and tones
-- Let users paste their own posts directly in the interface
-- Add post length control by character count
-- Deploy the app online (e.g. Streamlit Community Cloud)
 
 
 
