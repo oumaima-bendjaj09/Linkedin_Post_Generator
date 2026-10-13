@@ -38,22 +38,7 @@ Raw posts ──► LLM metadata extraction ──► Processed posts (topic, la
 | Data handling | pandas, JSON |
 | Configuration | python-dotenv |
 
-## 📁 Project Structure
 
-```
-.
-├── main.py              # Streamlit user interface
-├── post_generator.py    # Prompt construction and post generation
-├── few_shot.py          # Loads and filters past posts as examples
-├── preprocess.py        # Raw posts -> enriched posts (topic, language, length)
-├── llm_helper.py        # Groq LLM client
-├── data/
-│   ├── raw_posts.json         # Original posts (input)
-│   └── processed_posts.json   # Enriched posts used by the app
-├── requirements.txt
-├── .env.example
-└── README.md
-```
 
 ## ▶️ Getting Started
 
